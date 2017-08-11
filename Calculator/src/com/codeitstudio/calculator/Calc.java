@@ -1,11 +1,12 @@
 package com.codeitstudio.calculator;
+import java.util.*;
 //program on interfaces, anonymous class and lambda expressions.
 //Lambda expressions is a new feature that has been introduced in Java SE 8.
 //Lambda expressions are the substitute for the anonymous inner class.
 //
-interface drawable
+interface Calculate
 {
-	public void draw();
+	public static int calculate(int i, int j);
 }
 
 public class Calc {
@@ -13,21 +14,24 @@ public class Calc {
 	public static void main(String [] args)
 {
 	//This program is for anonymous inner class.
- drawable d = new drawable() {
+ Calculate c = new Calculate() {
 
 	@Override
-	public void draw() {
+	public void calculate() {
+		int num1 = i;
+		int num2 = j;
 		//this is a anonymous inner class. We are defining the method here.
-		int height = 10;
-		int length = 20;
-		int area = height*length;
-		
-		System.out.println("The area of the drawing page is:"+area);
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the value of Num1");
+		num1 = sc.nextInt();
+		System.out.println("Enter the value of Num2");
+		num2 =sc.nextInt();
+		return num1*num2;
 	}
 	 
  };	
  ///calling the method draw();
- d.draw();
+ c.calculate();
  
 }
 	
