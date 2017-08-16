@@ -42,7 +42,8 @@ public class Calc {
 		};
  ///calling the method calculate;
  c.calculate(2,7);
-	 d.nocalculate(56,4);
+d.noclaculate(53,67);		
+		
  
 }
 	
