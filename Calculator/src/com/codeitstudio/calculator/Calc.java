@@ -8,7 +8,10 @@ interface Calculate
 {
 	public int calculate(int i, int j);
 }
-
+interface nocalculate
+{
+	public int nocalculate(int a, int b);
+}
 public class Calc {
 
 	public static void main(String [] args)
@@ -21,14 +24,25 @@ public class Calc {
 		int num1 = i;
 		int num2 = j;
 		//this is a anonymous inner class. We are defining the method here.
-		return num1*num2;
+		return num1*num;
 	}
+	 
 
 	
 	 
- };	
+ };
+		nocalculate d = new nocalculate() {
+		@Override
+		 public int nocalculate(int a, int b) {
+			 int n1=a;
+			 int n2=b;
+			 
+			 return n1+n2;
+		 }
+		};
  ///calling the method calculate;
  c.calculate(2,7);
+	 d.nocalculate(56,4);
  
 }
 	
